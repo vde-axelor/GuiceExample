@@ -1,16 +1,18 @@
 package com.cls;
 
+import java.util.logging.Logger;
+
 import com.google.inject.Inject;
 
 public class TextEditor {
-	private SpellChecker spellChecker;
+	private Logger logger;
 
 	   @Inject
-	   public TextEditor(SpellChecker spellChecker) {
-	      this.spellChecker = spellChecker;
+	   public TextEditor( Logger logger) {
+	      this.logger = logger;
 	   }
 
 	   public void makeSpellCheck(){
-	      spellChecker.checkSpelling();
-	   }
+	      logger.info("In TextEditor.makeSpellCheck() method");
+	   } 
 }
