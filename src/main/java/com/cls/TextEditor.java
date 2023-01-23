@@ -3,14 +3,12 @@ package com.cls;
 import com.google.inject.Inject;
 
 public class TextEditor {
-	private SpellChecker spellChecker;
-
+	private Name name;
 	   @Inject
-	   public TextEditor(SpellChecker spellChecker) {
-	      this.spellChecker = spellChecker;
+	   public TextEditor( Name name) {
+	      this.name = name;
 	   }
-
-	   public void makeSpellCheck(){
-	      spellChecker.checkSpelling();
-	   }
+	   public void makename(){
+	      name.ShowName();
+	   } 
 }
