@@ -1,9 +1,10 @@
 package com.cls;
 
 import com.google.inject.ImplementedBy;
-import com.impl.NameData;
+import com.impl.UserData;
 
-@ImplementedBy(NameData.class)
+
+@ImplementedBy(UserData.class)
 public interface Name {
-	public void checkName();
+	 public void checkName();
 }
