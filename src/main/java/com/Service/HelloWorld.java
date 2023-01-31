@@ -1,5 +1,5 @@
-package com.service;
-import com.impl.GuiceImpl;
+package com.Service;
+import com.Impl.GuiceImpl;
 import com.google.inject.ImplementedBy;
 
 @ImplementedBy(GuiceImpl.class)

@@ -1,11 +1,11 @@
-package com.impl;
+package com.Impl;
 
-import com.service.HelloWorld;
+import com.Service.HelloWorld;
 
 public class GuiceImpl implements HelloWorld{
 	 @Override
 	   public String Hello() {
-	      return "Hello Guice by Application";
+	      return "Guice servlet by Application";
 	 }
 	   } 
 
