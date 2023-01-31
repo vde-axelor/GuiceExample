@@ -1,6 +1,6 @@
 package com.service;
 
 public interface StudentService {
-	void Student(int id); 
+	void Student(String name,String username,String password); 
 	
 }

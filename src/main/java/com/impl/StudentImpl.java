@@ -13,16 +13,16 @@ public class StudentImpl implements StudentService{
 	private Provider<EntityManager>  em;
 	
 	@Transactional
-	public void Student(int id) {
+	public void Student(String name,String username,String password) {
 
 		StudentDetail sd=  new StudentDetail();
-		sd.setId(9);
-//		sd.setName(name);
-//		sd.setUsername(username);
-//		sd.setPassword(password);
+		
+		sd.setName(name);
+		sd.setUsername(username);
+		sd.setPassword(password);
 		
 		System.out.println("Is transition is active ? " + em.get().getTransaction().isActive());
 		em.get().persist(sd);
-		System.out.println("Your name is : " + sd.getId());
+		System.out.println("Your Id is : " + sd.getId());
 	}
 }
