@@ -6,17 +6,18 @@ import com.google.inject.persist.Transactional;
 
 import javax.persistence.EntityManager;
 
-import com.app.StudentDetail;
+import com.app.StudentData;
 import com.service.StudentService;
 public class StudentImpl implements StudentService{
 	@Inject
 	private Provider<EntityManager>  em;
 	
 	@Transactional
-	public void Student(String name,String username,String password) {
+	public void Student(String name,String city,String username,String password) {
 
-		StudentDetail sd=  new StudentDetail();
+		StudentData sd=  new StudentData();
 		sd.setName(name);
+		sd.setCity(city);
 		sd.setUsername(username);
 		sd.setPassword(password);
 		em.get().persist(sd);

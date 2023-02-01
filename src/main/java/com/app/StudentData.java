@@ -5,11 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class StudentDetail {
+public class StudentData {
 	@Id
 	@GeneratedValue
 	private int id;
 	private String name;
+	private String city;
 	private String username;
 	private String password;
 	
@@ -27,6 +28,13 @@ public class StudentDetail {
 		this.name = name;
 	}
 	
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
 	public String getUsername() {
 		return username;
 	}
@@ -40,4 +48,5 @@ public class StudentDetail {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
 }
