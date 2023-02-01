@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
 <listener>
-  <listener-class>com.cls.Listner</listener-class>
+  <listener-class>com.Cls.GuiceListner</listener-class>
 </listener>
 
    <filter>

@@ -15,7 +15,8 @@ public class Test extends HttpServlet{
 	@Inject
 	private HelloWorld helloWorld;
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.getWriter().print(helloWorld.Hello());
+	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		res.getWriter().print(helloWorld.Hello());
+		
 	}
 }
