@@ -11,7 +11,7 @@ import com.service.StudentService;
 public class Main{
 	public static void main(String[] args) {
 		
-		Injector ij = Guice.createInjector(new StudentModule(),new JpaPersistModule("jpaTest"));
+		Injector ij = Guice.createInjector(new StudentModule(),new JpaPersistModule("jpa"));
 		PersistService ps =  ij.getInstance(PersistService.class);
 		ps.start();
 		
