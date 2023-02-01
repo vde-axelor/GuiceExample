@@ -10,7 +10,7 @@ import com.Service.HelloWorld;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 @Singleton
-public class Test extends HttpServlet{
+public class HelloServe extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	@Inject
 	private HelloWorld helloWorld;
