@@ -1,14 +1,5 @@
 package com.main;
 
-
-
-//import java.io.IOException;
-//
-//import javax.servlet.ServletException;
-//import javax.servlet.http.HttpServlet;
-//import javax.servlet.http.HttpServletRequest;
-//import javax.servlet.http.HttpServletResponse;
-
 import com.google.inject.Guice;
 
 import com.google.inject.Injector;
@@ -25,7 +16,7 @@ public class Main{
 		ps.start();
 		
 		StudentService ss = ij.getInstance(StudentService.class);
-		ss.Student("rita","ritadesai","rita123");
+		ss.Student("ABC","ABC","ABC123");
 		
 		System.out.println("Added Successfully...");
 	}
