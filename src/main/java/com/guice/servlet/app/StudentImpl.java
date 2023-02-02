@@ -6,8 +6,7 @@ import com.google.inject.persist.Transactional;
 
 import javax.persistence.EntityManager;
 
-import com.guice.servlet.app.StudentData;
-import com.guice.servlet.app.StudentService;
+
 public class StudentImpl implements StudentService{
 	@Inject
 	private Provider<EntityManager>  em;
