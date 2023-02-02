@@ -22,5 +22,8 @@ public class StudentImpl implements StudentService{
 		sd.setPassword(password);
 		em.get().persist(sd);
 		System.out.println("Your Id is : " + sd.getId());
+		System.out.println("Your Name is:"+sd.getName());
+		System.out.println("Your City is:"+sd.getCity());
+		
 	}
 }
