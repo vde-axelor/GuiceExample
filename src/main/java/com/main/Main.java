@@ -16,7 +16,7 @@ public class Main{
 		ps.start();
 		
 		StudentService ss = ij.getInstance(StudentService.class);
-		ss.Student("Tirth","Surat","tirth","tdv123");
+		ss.Student("XYZ","Mumbai","xyz","xyz321");
 		
 		System.out.println("Added Successfully...");
 	}
