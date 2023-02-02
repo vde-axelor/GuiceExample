@@ -14,46 +14,49 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.StudentData;
 import com.google.inject.Guice;
-
+import com.google.inject.Inject;
 import com.google.inject.Injector;
-
+import com.google.inject.Provider;
+import com.google.inject.Singleton;
 import com.google.inject.persist.PersistService;
 import com.google.inject.persist.jpa.JpaPersistModule;
 import com.module.StdModule;
 import com.service.StudentService;
-@WebServlet(urlPatterns = ("/student"))
+
+@Singleton
 public class Main extends HttpServlet{
 
+	@Inject Provider<EntityManager>  em;
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
-		Injector ij = Guice.createInjector(new StdModule(),new JpaPersistModule("jpa"));
-		PersistService ps =  ij.getInstance(PersistService.class);
-		ps.start();
-		PrintWriter pw=res.getWriter();
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("form");
-		EntityManager em = emf.createEntityManager();
-		StudentService ss = ij.getInstance(StudentService.class);
-		String name=req.getParameter("name");
-		String city=req.getParameter("city");
-		String username=req.getParameter("username");
-		String password=req.getParameter("password");
-		StudentData sd=new StudentData();
-		sd.setName(name);
-		sd.setCity(city);
-		sd.setUsername(username);
-		sd.setPassword(password);
-		em.persist(sd);
-		em.getTransaction().commit();
-		pw.print("Added Successfully...");  
-	    em.close();
-	    emf.close();
-//		ss.Student("Om","Pune","omdesai","omd123");
-//		pw.print("Added Successfully...");
-		System.out.println("Added Successfully...");
+		
+		
+		PrintWriter pw = res.getWriter();
+		pw.print("hello");
+		/*
+		 * Injector ij = Guice.createInjector(new StdModule(),new
+		 * JpaPersistModule("jpa")); PersistService ps =
+		 * ij.getInstance(PersistService.class); ps.start(); PrintWriter
+		 * pw=res.getWriter(); // EntityManagerFactory emf =
+		 * Persistence.createEntityManagerFactory("jpa"); // EntityManager em =
+		 * emf.createEntityManager();
+		 * 
+		 * StudentService ss = ij.getInstance(StudentService.class); // String
+		 * name=req.getParameter("name"); // String city=req.getParameter("city"); //
+		 * String username=req.getParameter("username"); // String
+		 * password=req.getParameter("password"); StudentData sd=new StudentData();
+		 * sd.setName("RAM"); sd.setCity("Vapi"); sd.setUsername("ram");
+		 * sd.setPassword("ram123"); em.get().persist(sd);
+		 * pw.print("Added Successfully...");
+		 * 
+		 * // ss.Student("Om","Pune","omdesai","omd123"); //
+		 * pw.print("Added Successfully...");
+		 * System.out.println("Added Successfully...");
+		 */
 
 	}
 	
-	protected void goPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
+	protected void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
 		doGet(req,res);
 	}
 
