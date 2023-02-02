@@ -30,7 +30,7 @@ public class Main extends HttpServlet {
 		PrintWriter pw = res.getWriter();
 		pw.print("Hello");
 
-		Injector ij = Guice.createInjector(new StudentModule(), new JpaPersistModule("jpa"));
+		Injector ij = Guice.createInjector(new StdModule(), new JpaPersistModule("jpa"));
 		PersistService ps = ij.getInstance(PersistService.class);
 		ps.start();
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa");
@@ -49,7 +49,7 @@ public class Main extends HttpServlet {
 		em.persist(sd);
 		pw.print("Added Successfully...");
 
-		// ss.Student("Om","Pune","omdesai","omd123");
+		ss.Student("test","test","test","test");
 		pw.print("Added Successfully...");
 		System.out.println("Added Successfully...");
 //		String name = req.getParameter("name");
