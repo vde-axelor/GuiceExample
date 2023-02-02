@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+<servlet>
+<servlet-name>Main</servlet-name>
+<jsp-file>/Student.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>Main</servlet-name>
+<url-pattern>/Student.jsp</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>Main</servlet-name>
+<servlet-class>com.main</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Main</servlet-name>
+<url-pattern>/main</url-pattern>
+</servlet-mapping>
+
+</web-app>
