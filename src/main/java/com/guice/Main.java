@@ -25,7 +25,7 @@ public class Main extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
 		PrintWriter pw=res.getWriter();
-		pw.println(hs.Hello());
+		pw.println(hs.Name());
 		
 		String name = req.getParameter("name");
 		String city = req.getParameter("city");
