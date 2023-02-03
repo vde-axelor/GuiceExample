@@ -23,4 +23,7 @@ public class StudentImpl implements StudentService{
 		em.get().persist(sd);
 		System.out.println("Your Id is : " + sd.getId());
 	}
+	public void Hello() {
+		System.out.print("Hello");
+	}
 }

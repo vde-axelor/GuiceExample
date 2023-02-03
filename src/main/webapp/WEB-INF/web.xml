@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
-<servlet>
-<servlet-name>Main</servlet-name>
-<jsp-file>/Student.jsp</jsp-file>
-</servlet>
-<servlet-mapping>
-<servlet-name>Main</servlet-name>
-<url-pattern>/Student.jsp</url-pattern>
-</servlet-mapping>
-<servlet>
-<servlet-name>Main</servlet-name>
-<servlet-class>com.main</servlet-class>
-</servlet>
-<servlet-mapping>
-<servlet-name>Main</servlet-name>
-<url-pattern>/main</url-pattern>
-</servlet-mapping>
+<listener>
+  <listener-class>com.guice.servlet.StdModule</listener-class>
+</listener>
 
+   <filter>
+    <filter-name>guiceFilter</filter-name>
+    <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>guiceFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>

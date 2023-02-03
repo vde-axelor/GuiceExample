@@ -7,7 +7,7 @@
 <title>Student Data</title>
 </head>
 <body>
-	<form action="Main" method="post">
+	<form action="hello" method="post">
 		<input type="text" name="name" placeholder="Enter Name"><br>
 		<input type="text" name="city" placeholder="Enter City"><br>
 		<input type="text" name="username" placeholder="Enter User Name"><br>
