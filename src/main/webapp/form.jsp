@@ -7,6 +7,7 @@
 <title>Student Detail</title>
 </head>
 <body align="center">
+<h3>
 	<form action="hello" method="post">
 		<input type="text" name="name" placeholder="Enter Name"><br>
 		<input type="text" name="city" placeholder="Enter City"><br>
@@ -14,5 +15,6 @@
 		<input type="password" name="password" placeholder="Enter Password"><br>
 		<input type="submit" name="submit">
 	</form>
+	</h3>
 </body>
 </html>

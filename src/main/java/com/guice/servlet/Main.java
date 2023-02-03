@@ -3,12 +3,22 @@ package com.guice.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServlet;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.inject.Guice;
 import com.google.inject.Inject;
+import com.google.inject.Injector;
 import com.google.inject.Singleton;
+import com.google.inject.persist.PersistService;
+import com.google.inject.persist.jpa.JpaPersistModule;
+import com.guice.servlet.app.StdModule;
+import com.guice.servlet.app.StudentData;
+import com.guice.servlet.app.StudentService;
 
 @Singleton
 public class Main extends HttpServlet{
@@ -20,6 +30,7 @@ public class Main extends HttpServlet{
 	protected void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
 		PrintWriter pw=res.getWriter();
 		pw.println(hs.Hello());
+		
 		String name = req.getParameter("name");
 		String city = req.getParameter("city");
 		String username = req.getParameter("username");
