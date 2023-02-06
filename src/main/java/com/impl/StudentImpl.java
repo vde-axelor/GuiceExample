@@ -1,6 +1,5 @@
 package com.impl;
 
-import com.app.Student;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.persist.Transactional;
@@ -13,7 +12,6 @@ public class StudentImpl implements StudentService{
 	private Provider<EntityManager>  em;
 	
 	@Transactional
-	@Override
 	public void Student(String name,String city,String username,String password) {
 
 		Student sd=  new Student();

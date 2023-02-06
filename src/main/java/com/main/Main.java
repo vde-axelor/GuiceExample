@@ -20,14 +20,15 @@ public class Main extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
+
 	
 	protected void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
-		Injector ij = Guice.createInjector(new StudentModule(),new JpaPersistModule("jpa"));
+		Injector ij = Guice.createInjector(new JpaPersistModule("jpa"),new StudentModule());
 		PersistService ps =  ij.getInstance(PersistService.class);
 		ps.start();
 		
 		StudentService ss = ij.getInstance(StudentService.class);
-		ss.Student("test1","test1","test1","test1");
+		ss.Student("Om","Mumbai","om","om321");
 
 		
 		System.out.println("Added Successfully...");
