@@ -27,7 +27,7 @@ public class Main extends HttpServlet{
 		ps.start();
 		
 		StudentService ss = ij.getInstance(StudentService.class);
-		ss.Student("test","test","test","test");
+		ss.Student("test1","test1","test1","test1");
 
 		
 		System.out.println("Added Successfully...");
