@@ -1,4 +1,4 @@
-package com.guice.Persistence;
+package com.guice;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

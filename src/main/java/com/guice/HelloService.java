@@ -5,6 +5,6 @@ import com.google.inject.ImplementedBy;
 @ImplementedBy(HelloImpl.class)
 public interface HelloService {
 //	String Hello();
-	String Name();
+	String Name(String name);
 	
 }

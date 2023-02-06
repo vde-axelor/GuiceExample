@@ -8,10 +8,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import com.google.inject.Guice;
 import com.google.inject.Inject;
-
+import com.google.inject.Injector;
 import com.google.inject.Singleton;
+import com.google.inject.persist.PersistService;
+import com.google.inject.persist.jpa.JpaPersistModule;
+
 
 
 
@@ -20,12 +23,20 @@ public class Main extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	@Inject
-	private HelloService hs;
+private HelloService hs;
 	
 	@Override
 	protected void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
 		PrintWriter pw=res.getWriter();
-		pw.println(hs.Name());
+		pw.println(hs.Name("Vishwa"));
+		
+		Injector ij = Guice.createInjector(new StudentModule(),new JpaPersistModule("jpa"));
+		PersistService ps =  ij.getInstance(PersistService.class);
+		ps.start();
+		
+		StudentService ss = ij.getInstance(StudentService.class);
+		ss.Student("test","test","test","test");			
+		System.out.println("Added Successfully...");
 		
 		String name = req.getParameter("name");
 		String city = req.getParameter("city");
