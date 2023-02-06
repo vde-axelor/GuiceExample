@@ -2,7 +2,7 @@
 <web-app>
 
 <listener>
-  <listener-class>com.guice.HelloListner</listener-class>
+  <listener-class>com.listner.HelloListner</listener-class>
 </listener>
    <filter>
     <filter-name>guiceFilter</filter-name>
