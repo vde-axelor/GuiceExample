@@ -4,8 +4,8 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.persist.Transactional;
 import com.service.StudentService;
-
 import javax.persistence.EntityManager;
+import com.app.Student;
 
 public class StudentImpl implements StudentService{
 	@Inject

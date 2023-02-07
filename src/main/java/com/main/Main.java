@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Singleton;
@@ -28,8 +29,8 @@ public class Main extends HttpServlet{
 		ps.start();
 		
 		StudentService ss = ij.getInstance(StudentService.class);
-		ss.Student("Om","Mumbai","om","om321");
-
+		ss.Student("XYZ","Surat","xyz","xyz12");
+		
 		
 		System.out.println("Added Successfully...");
 	}
