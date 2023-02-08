@@ -3,7 +3,7 @@ package com.main;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.module.StudentModule;
-import com.app.StudentApp;
+import com.app.Student;
 
 
 
@@ -11,7 +11,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Injector ij = Guice.createInjector(new StudentModule());
-		StudentApp sa = ij.getInstance(StudentApp.class);
+		Student sa = ij.getInstance(Student.class);
 		
 		
 		System.out.println("Student Data ");
