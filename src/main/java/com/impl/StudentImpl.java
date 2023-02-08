@@ -4,16 +4,19 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.persist.Transactional;
 import com.service.StudentService;
+
 import javax.persistence.EntityManager;
+
 import com.app.Student;
 
 public class StudentImpl implements StudentService{
+	
 	@Inject
-	private Provider<EntityManager>  em;
+	private Provider<EntityManager> em;
 	
 	@Transactional
-	public void Student(String name,String city,String username,String password) {
-
+	@Override
+	public void Student(String name, String city, String username, String password) {
 		Student sd=  new Student();
 		sd.setName(name);
 		sd.setCity(city);
@@ -25,4 +28,6 @@ public class StudentImpl implements StudentService{
 		System.out.println("Your City is:"+sd.getCity());
 		
 	}
+	
+
 }
